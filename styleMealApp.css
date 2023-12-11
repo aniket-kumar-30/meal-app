@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap');
+
+/* Global variables */
+:root{
+    --light-gray: rgb(90, 86, 86);
+    --dark-gray: rgb(50, 50, 48);
+}
+/* Reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Body CSS */
+body{
+    background-color: var(--light-gray);
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.2;
+}
+/* Utilites */
+.text-center{
+    text-align: center;
+}
+
+.container{
+    width: 90%;
+    max-width: 992px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+li{
+    list-style: none;
+}
+.active{
+    color: gold !important;
+    font-weight: 700 !important;
+}
+
+/* Header */
+#main-header{
+    width: 100%;
+    background-color: var(--dark-gray);
+    height: 70px;
+    color: white;
+    /* box-shadow: 0 -5px 5px 5px rgba(0,0,0,0.7); */
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#navbar h2 a {
+    font-size: 1.2rem;
+}
+#navbar ul{
+    display: flex;
+}
+#navbar ul li{
+    list-style: none;
+    margin: 0 5px;
+}
+#navbar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+/* Search Bar */
+
+#search-bar{
+    position: relative;
+    width: 50%;
+    height: 40px;
+    margin: 50px auto 50px;
+}
+#search-meal{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border: none;
+    color: black;
+    padding: 0 50px 0 10px;
+}
+
+#search-btn{
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+}
+
+/* Display Meal */
+
+#display-meal{
+    width: 50%;
+    max-width: 300px;
+    height: 400px;
+    margin: 0 auto;
+}
+.card{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.8);
+    padding: 10px;
+    position: relative;
+    overflow:hidden;
+    transition: transform 0.2s ease-in-out;
+}
+    
+.card::before{
+    content: '';
+    position: absolute;
+    background-color: rgba(0,0,0,0.3);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.card-img{
+    width: 100%;
+    height: 100%;
+}
+.card-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.card-content{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    padding: 10px;
+}
+.card:hover{
+    transform: scale(1.02);
+}
+
+.card-content h2{
+    font-family: cursive;
+    color: rgb(203, 25, 55);
+    font-size: 2rem;
+}
+.card-content p{
+    margin: 10px 0;
+    font-weight: 600;
+    color: goldenrod;
+    font-size: 1rem;
+}
+.fav-btn{
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    color: white;
+    background: transparent;
+    border: none;
+    z-index: 4;
+}
+
+/* Meal Details */
+#meal-details{
+    width: 100%;
+    max-width: 900px;
+    margin: 80px auto 20px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 50vh;
+    justify-content: center;
+}
+
+#meal-details .meal-img{
+    width: 45%;
+    height: 100%;
+}
+#meal-details .meal-img img{
+    width: 100%;
+    height: 100%;
+}
+
+#meal-details .meal-details-text{
+    width: 45%;
+    height: 100%;
+    padding: 0 10px;
+    color: white;
+    overflow: hidden;
+}
+
+#meal-details .meal-details-text h2{
+    margin-bottom: 15px;
+    color: chocolate;
+}
+#meal-details .meal-details-text h2 +div{
+    color: goldenrod;
+    margin: 10px 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+#meal-details .meal-details-text h2 +div p{
+    font-size: 1rem;
+    margin: 0 5px;
+    font-weight: 500;
+}
+#meal-details .meal-details-text h3{
+    margin-bottom: 10px;
+}
+#meal-details .meal-details-text p{
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+#meal-instruction{
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    font-size: 0.6rem;
+    font-weight: 400;
+    max-width: 900px;
+}
+
+@media screen and (max-width: 600px){
+    #meal-details{
+        width: 70%;
+        max-width: 600px;
+        margin: 50px auto 20px;
+        height: 90vh;
+    }
+    
+    #meal-details .meal-img{
+        width: 100%;
+        height: 55%;
+        margin-bottom: 20px;
+    }
+    #meal-details .meal-img img{
+        width: 100%;
+        height: 100%;
+    }
+    #meal-details .meal-details-text{
+        width: 100%;
+        padding: 0 10px;
+        color: white;
+        overflow: hidden;
+        height: 35%;
+    }
+    
+    #meal-details .meal-details-text h2{
+        margin-bottom: 15px;
+        color: chocolate;
+    }
+
+
+    #meal-details .meal-details-text h3{
+        margin: 15px 0;
+    }
+    #meal-details .meal-details-text p{
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+    #meal-instruction{
+        width: 90%;
+        margin: 0 auto;
+        color: white;
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+    
+}
+
+
+
+/* Favourite meals */
+#favourite-meals{
+    width: 70%;
+    max-width: 600px;
+    margin: 50px auto;
+}
+.fav-list{
+    margin-top: 40px;
+}
+#favourite-meals li{
+    background-color: white;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    position: relative;
+}
+#favourite-meals h2{
+    color: goldenrod;
+}
+.delete{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Notification */
+.added,.deleted{
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    color: goldenrod;
+    position: absolute;
+    z-index: 2;
+    top: 13%;
+    right: 3%;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 5px 0;
+}
+.red,.green{
+    width: 0;
+    height: 3px;
+    margin: 10px;
+    animation: animate 1s ease-in-out forwards;
+}
+@keyframes animate{
+    to{
+        width: 90%;
+    }
+}
+.red{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
+}
