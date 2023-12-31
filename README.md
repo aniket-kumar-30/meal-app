@@ -13,7 +13,7 @@ Used local storage to store favourite meals
 |-------------|------|
 |Meal Name    | String |
 
-![Dashboard](https://cool-druid-c22750.netlify.app/home)
+![Dashboard image](https://cool-druid-c22750.netlify.app/home)
 
 #### Demo
  [Meal App](cool-druid-c22750.netlify.app)
