@@ -1,4 +1,4 @@
-(function(){
+
     // global variable have current page path
     const global = {
         currentPage: window.location.pathname
@@ -208,16 +208,16 @@
     // Function to route meal app pages when dom load
     function init(){
         switch(global.currentPage){
-            case 'home.html':
+            case '/home.html':
                 console.log('Home Page');
                 getFavourteMeals()
                 handleclick()
                 break;
-            case 'MealDetails.html':
+            case '/MealDetails.html':
                 console.log('Meal Detail page');
                 MealDetails();
                 break;
-            case 'FavMeal.html':
+            case '/FavMeal.html':
                 console.log('Favourte Meal page');
                 favouriteMeals()
                 break;
@@ -228,4 +228,3 @@
     }
     
     document.addEventListener('DOMContentLoaded',init);
-})()
