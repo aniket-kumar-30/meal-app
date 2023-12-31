@@ -16,7 +16,7 @@ Used local storage to store favourite meals
 ![Dashboard](https://cool-druid-c22750.netlify.app/home)
 
 #### Demo
- [Meal App](cool-druid-c22750.netlify.app)
+ [Meal App](https://cool-druid-c22750.netlify.app)
 ## Author
 - [@AniketKumar](https://github.com/aniket-kumar-30/meal-app/tree/master)
 
