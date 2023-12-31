@@ -15,6 +15,7 @@ Used local storage to store favourite meals
 
 
 ### DashBoard Image
+
 <img width="400" height="200" alt="Screenshot 2023-12-31 114814" src="https://github.com/aniket-kumar-30/meal-app/assets/99535260/621822ad-4401-4274-8776-595eeb0e951a">
 
 #### Demo
