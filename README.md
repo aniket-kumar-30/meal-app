@@ -20,5 +20,3 @@ Used local storage to store favourite meals
 ## Author
 - [@AniketKumar](https://github.com/aniket-kumar-30/meal-app/tree/master)
 
-
-
