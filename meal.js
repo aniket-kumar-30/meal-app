@@ -208,16 +208,16 @@
     // Function to route meal app pages when dom load
     function init(){
         switch(global.currentPage){
-            case '/home.html':
+            case '/home':
                 console.log('Home Page');
                 getFavourteMeals()
                 handleclick()
                 break;
-            case '/MealDetails.html':
+            case '/MealDetails':
                 console.log('Meal Detail page');
                 MealDetails();
                 break;
-            case '/FavMeal.html':
+            case '/FavMeal':
                 console.log('Favourte Meal page');
                 favouriteMeals()
                 break;
