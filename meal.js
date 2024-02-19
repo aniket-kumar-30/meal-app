@@ -242,11 +242,11 @@
                 getFavourteMeals()
                 displayMeals()
                 break;
-            case '/MealDetails':
+            case '/mealdetails':
                 console.log('Meal Detail page');
                 MealDetails();
                 break;
-            case '/FavMeal':
+            case '/favmeal':
                 console.log('Favourte Meal page');
                 favouriteMeals()
                 break;
