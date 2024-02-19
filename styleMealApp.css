@@ -16,6 +16,7 @@ body{
     background-color: var(--light-gray);
     font-family: 'Nunito', sans-serif;
     line-height: 1.2;
+    width: 100vw;
 }
 /* Utilites */
 .text-center{
@@ -46,17 +47,22 @@ li{
 
 /* Header */
 #main-header{
-    width: 100%;
+    width: 100vw;
     background-color: var(--dark-gray);
     height: 70px;
     color: white;
     /* box-shadow: 0 -5px 5px 5px rgba(0,0,0,0.7); */
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 
 #navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 #navbar h2 a {
     font-size: 1.2rem;
@@ -75,8 +81,39 @@ li{
     font-weight: 600;
 }
 
-/* Search Bar */
+main{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
 
+/* showcase */
+#showcase{
+    background-image: url('https://plus.unsplash.com/premium_photo-1670601440146-3b33dfcd7e17?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWVhbHxlbnwwfHwwfHx8MA%3D%3D');
+    /* background: linear-gradient(to right,rgba(0,0,0,0.3),rgba(0,0,0,0.6)); */
+    background-size: cover;;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 70vh;
+    text-align: center;
+    color: white;
+    position: relative;
+    border-top: 4px solid gold;
+}
+#showcase-text{
+    position: absolute;
+    top: 35%;
+    left: 15%;
+}
+#showcase-text h1{
+    font-size: 5rem;
+}
+#showcase-text p{
+    font-size: 0.8rem;
+}
+
+/* Search Bar */
 #search-bar{
     position: relative;
     width: 50%;
@@ -101,22 +138,25 @@ li{
     font-size: 1rem;
 }
 
+
 /* Display Meal */
 
 #display-meal{
-    width: 50%;
-    max-width: 300px;
-    height: 400px;
+    width: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .card{
-    width: 100%;
-    height: 100%;
+    width: 200px;
+    height:350px;
     box-shadow: 0 0 5px 5px rgba(0,0,0,0.8);
-    padding: 10px;
+    padding: 5px;
     position: relative;
     overflow:hidden;
     transition: transform 0.2s ease-in-out;
+    margin: 10px;
 }
     
 .card::before{
@@ -140,7 +180,7 @@ li{
 .card-content{
     width: 90%;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 5%;
     padding: 10px;
 }
@@ -169,6 +209,10 @@ li{
     background: transparent;
     border: none;
     z-index: 4;
+}
+
+#meal-items{
+    
 }
 
 /* Meal Details */
@@ -283,29 +327,47 @@ li{
 
 /* Favourite meals */
 #favourite-meals{
-    width: 70%;
-    max-width: 600px;
-    margin: 50px auto;
+    width: 100%;
+    margin: 50px 0;
 }
 .fav-list{
     margin-top: 40px;
 }
-#favourite-meals li{
+#fav-meal-list{
+    width: 60%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#fav-meal-list div{
+    position: relative;
     background-color: white;
     padding: 10px;
     margin: 10px 0;
     font-size: 1rem;
-    position: relative;
+    height: 150px;
+    border-radius: 10px;
+}
+#fav-meal-list div li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    color: rgb(227, 213, 213);
+    height: 100%;
+    font-weight: 600;
+    font-family:monospace;
 }
 #favourite-meals h2{
     color: goldenrod;
 }
-.delete{
+span .delete{
     position: absolute;
     right: 10px;
     top: 10px;
     font-size: 1.2rem;
     font-weight: 600;
+    color: goldenrod;
 }
 
 /* Notification */
@@ -314,10 +376,10 @@ li{
     height: 50px;
     background-color: white;
     color: goldenrod;
-    position: absolute;
+    position: sticky;
     z-index: 2;
     top: 13%;
-    right: 3%;
+    left: 85%;
     font-size: 0.9rem;
     font-weight: 600;
     text-align: center;
@@ -340,4 +402,11 @@ li{
 
 .green{
     background-color: green;
+}
+
+#delete-all{
+    color: red;
+    position: absolute;
+    right: 10%;
+    top: 15%;
 }
